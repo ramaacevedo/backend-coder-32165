@@ -13,12 +13,12 @@ class Usuario{
         return `Mi nombre es ${this.nombre} ${this.apellido}`
     }
 
-    addMascota(mascota){
-        this.mascotas.push(mascota)
+    addMascota(mascotas){
+        this.mascotas.push(mascotas)
     }
 
-    conuntMascotas(){
-        this.mascotas.length
+    countMascotas(){
+        return this.mascotas.length
     }
 
     addBook(nombre, autor){
@@ -31,5 +31,9 @@ class Usuario{
 }
 
 const newUser = new Usuario (this.nombre, this.apellido, this.libros, this.mascotas);
+console.log(newUser.getFullName());
+newUser.addMascota('Conejo');
+console.log(newUser.countMascotas());
 newUser.addBook('Sombra y Hueso', 'Leigh Bardugo');
 console.log(newUser.getBookNames());
+console.log(newUser);
